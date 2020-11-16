@@ -1,0 +1,563 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*,
+*::after,
+*::before{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;   
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5em;
+}
+li{
+    font-size: 1.6rem;
+    letter-spacing: 0.10em;
+    margin-bottom: 0.5em;
+}
+h1,h2,h3{
+    margin-bottom: 0.5em;
+}
+
+/* ######################################### utility classes ########################################### */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.lg-heading{
+    font-size: 3.5rem;
+}
+.md-heading{
+    font-size: 2.2rem;
+}
+.btn{
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1em 2.5em;
+    border-radius: 50px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.btn-primary{
+    background-color: #16a083;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+.btn-primary:hover{
+    background-color: #15745f;
+}
+
+/* ####################################### navbar styling ########################################### */
+
+
+/* ########## for desktop mode ########## */
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+.navbar{
+    box-shadow: 0px 5px 10px 0 #aaa;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 999;
+}
+.navbar .navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+.navbar-container .logo{
+    order: 1;
+}
+.navbar-container .manu-itams{
+    display: flex;
+    order: 2;
+}
+.navbar-container .manu-itam{
+    display: inline-block;
+    padding: 1rem;
+}
+.navbar-container .manu-itams li{
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+}
+.navbar a{
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.navbar a:hover{
+    color: #16918a;
+}
+
+/* ############################################# showcase area styling ############################################## */
+
+.showcase-area{
+    height: 50vh;
+    position: relative;
+    background-image: url("./img/header-image2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.showcase{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+}
+.showcase .main-title{
+    text-transform: uppercase;
+}
+
+/* ############################################ about us styling ###################################################### */
+
+.abouts{
+    background-color: #f5f5f7;
+    padding: 3rem 0;
+}
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about-wrapper h2{
+    font-size: 3.2rem;
+}
+.about-wrapper p{
+    font-size: 1.6rem;
+    color: #555;
+}
+.about-wrapper .small{
+    color: #666;
+    font-weight: 600;
+}
+.about-wrapper .about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translate(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-wrapper .about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translate(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-wrapper .about-img img{
+    display: block;
+    height: 350px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+/* ############################################ foods container styling ################################################ */
+.foods{
+    padding: 5rem 0 10rem 0;
+}
+.foods h2{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+.food-container{
+    display: flex;
+    justify-content: space-between;
+}
+.img-container img{
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+.img-container{
+    margin: 0 1rem;
+    position: relative;
+}
+.img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.2s ease-in-out 0.1s;
+    z-index: 2;
+}
+.img-container h3{
+    color: #fff;
+    font-size: 3rem;
+}
+.img-container a{
+    font-size: 1.2rem;
+}
+.img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.801);
+    opacity: 1;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.2s ease-in-out;
+}
+.img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.img-container:hover .img-content{
+    opacity: 1;
+    top: 50%;
+}
+
+/* ############################################## manu us styling #################################################### */
+
+.food-manu-us{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 400;
+    color: #666;
+    text-transform: uppercase;
+}
+.food-manu-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0px 30px 0px ;
+}
+.food-manu-container img{
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.4s ease-in-out;
+}
+.food-manu-container img:hover{
+    transform: scale(1.05,1.05);
+    border-radius: 10px;
+}
+.food-manu-itams{
+    display: flex;
+    flex: 1 1 600px;
+    justify-content: space-evenly;
+    margin-bottom: 3rem;
+}
+.food-manu-text{
+    margin: auto 1.5rem;
+}
+.food-manu-title{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: #444;
+}
+.food-manu-text p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #555;
+}
+.food-manu-text .food-price{
+    color: #117964;
+    font-weight: 700;
+}
+
+/* ############################################ testimonials custamer rating styling ########################################### */
+
+.testimonials{
+    padding: 5rem 0rem;
+    background-color: rgba(243,243,243);
+}
+.testimonial-title{
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 400;
+    color: #666;   
+    text-transform: uppercase;
+}
+.testimonial-container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+.testimonial-box .checked{
+    color: #ff9529;
+}
+.testimonial-box .testimonial-text{
+    margin: 1rem 0;
+    color: #444;
+}
+.testimonial-box{
+    text-align: center;
+    padding: 1rem;
+    /* width: 350px; */
+}
+.customer-photo img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/* ######################################### contact us styling ################################################ */
+
+.contact{
+    padding: 5rem 0;
+    background-color: rgb(226,226,226);
+}
+.contact-container{
+    display: flex;
+    background-color: #fff;
+}
+.contact-img{
+    width: 50%;
+}
+.contact-img img{
+    display: block;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.form-container{
+    padding: 1rem;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.form-container input,
+.form-container textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    padding: 1rem 0;
+    box-shadow: none;
+    margin-bottom: 1rem;
+    color: #444;
+    font-weight: 500;
+    resize: none;
+}
+.form-container h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 1rem;
+}
+.form-container a{
+    font-size: 1.2rem;
+}
+
+/* #################################### footer tyaling ####################################### */
+
+.footers{
+    background-color: #263238;
+    text-align: center;
+    padding: 2rem;
+    font-weight: 500;
+    color: #f4f4f4;
+}
+.icons i{
+    margin: 0.5em;
+}
+.footers .icons a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* ################################################# media queries #################################################### */
+@media (max-width: 768px){
+    .nevbar{
+        opacity: 0.98;
+    }
+    .navbar input[type="checkbox"],
+    .navbar .hamburger-lines{
+        display: block;
+    }
+    .navbar .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar input[type="checkbox"]{
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top: 17px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+    .navbar .hamburger-lines{
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top: 17px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 2;
+    }
+    .navbar .hamburger-lines .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border: 10px;
+        background-color: #333;
+    }
+    .navbar .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .hamburger-lines .line2{
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .manu-itams{
+        padding-top: 100px;
+        background-color: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-evenly; */
+        margin-left: -50px;
+        margin-top: -10px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 1px #aaa;
+    }
+    .navbar-container .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 3rem;
+    }
+    .navbar-container .manu-itams li{
+       margin-bottom: 3rem;
+       font-size: 2rem;
+       font-weight: 500;
+    }
+    .navbar input[type="checkbox"]:checked ~ .manu-itams{
+        transform: translate(0);
+    }
+    .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line2{
+        transform: scaley(0);
+    }
+    .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+ 
+    /* ############################## food container ################################# */
+    .food-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .food-type:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    .food-type{
+        box-shadow: 5px 5px 10px 0px #aaa;
+    }
+    .img-container{
+        margin: 0;
+    }
+}    
+
+/* ##################################### small screen #################################### */
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+    .food-manu-itams{
+        flex-direction: column;
+        text-align: center;
+    }
+    .food-manu-container img{
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+    .testimonial-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .form-container{
+        width: 90%;
+    }
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-img{
+        width: 90%;
+        margin: 3rem auto;
+    }
+}
+
+/* ############################## landscape mode ################################# */
+
+@media (orientation: landscape) and (max-height :500px){
+    .showcase-area{
+        height: 50vmax;
+    }
+}
