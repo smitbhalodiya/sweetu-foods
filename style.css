@@ -94,15 +94,15 @@ h1,h2,h3{
 .navbar-container .logo{
     order: 1;
 }
-.navbar-container .manu-itams{
+.navbar-container .manu-items{
     display: flex;
     order: 2;
 }
-.navbar-container .manu-itam{
+.navbar-container .manu-item{
     display: inline-block;
     padding: 1rem;
 }
-.navbar-container .manu-itams li{
+.navbar-container .manu-items li{
     margin-left: 1.5rem;
     font-size: 1.8rem;
 }
@@ -284,7 +284,7 @@ h1,h2,h3{
     transform: scale(1.05,1.05);
     border-radius: 10px;
 }
-.food-manu-itams{
+.food-manu-items{
     display: flex;
     flex: 1 1 600px;
     justify-content: space-evenly;
@@ -469,7 +469,7 @@ h1,h2,h3{
         transform-origin: 0% 100%;
         transition: transform 0.4s ease-in-out;
     }
-    .navbar-container .manu-itams{
+    .navbar-container .manu-items{
         padding-top: 100px;
         background-color: #fff;
         height: 100vh;
@@ -490,12 +490,12 @@ h1,h2,h3{
         right: 15px;
         font-size: 3rem;
     }
-    .navbar-container .manu-itams li{
+    .navbar-container .manu-items li{
        margin-bottom: 3rem;
        font-size: 2rem;
        font-weight: 500;
     }
-    .navbar input[type="checkbox"]:checked ~ .manu-itams{
+    .navbar input[type="checkbox"]:checked ~ .manu-items{
         transform: translate(0);
     }
     .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line1{
@@ -529,7 +529,7 @@ h1,h2,h3{
     html{
         font-size: 50%;
     }
-    .food-manu-itams{
+    .food-manu-items{
         flex-direction: column;
         text-align: center;
     }
