@@ -94,15 +94,15 @@ h1,h2,h3{
 .navbar-container .logo{
     order: 1;
 }
-.navbar-container .manu-items{
+.navbar-container .menu-items{
     display: flex;
     order: 2;
 }
-.navbar-container .manu-item{
+.navbar-container .menu-item{
     display: inline-block;
     padding: 1rem;
 }
-.navbar-container .manu-items li{
+.navbar-container .menu-items li{
     margin-left: 1.5rem;
     font-size: 1.8rem;
 }
@@ -259,19 +259,19 @@ h1,h2,h3{
 
 /* ############################################## manu us styling #################################################### */
 
-.food-manu-us{
+.food-menu-heading{
     font-size: 4rem;
     text-align: center;
     font-weight: 400;
     color: #666;
     text-transform: uppercase;
 }
-.food-manu-container{
+.food-menu-container{
     display: flex;
     flex-wrap: wrap;
     padding: 50px 0px 30px 0px ;
 }
-.food-manu-container img{
+.food-menu-container img{
     display: block;
     width: 250px;
     height: 250px;
@@ -280,35 +280,35 @@ h1,h2,h3{
     object-position: center;
     transition: all 0.4s ease-in-out;
 }
-.food-manu-container img:hover{
+.food-menu-container img:hover{
     transform: scale(1.05,1.05);
     border-radius: 10px;
 }
-.food-manu-items{
+.food-menu-items{
     display: flex;
     flex: 1 1 600px;
     justify-content: space-evenly;
     margin-bottom: 3rem;
 }
-.food-manu-text{
+.food-menu-text{
     margin: auto 1.5rem;
 }
-.food-manu-title{
+.food-menu-title{
     font-size: 2.2rem;
     font-weight: 400;
     color: #444;
 }
-.food-manu-text p{
+.food-menu-text p{
     font-size: 1.4rem;
     font-weight: 500;
     color: #555;
 }
-.food-manu-text .food-price{
+.food-menu-text .food-price{
     color: #117964;
     font-weight: 700;
 }
 
-/* ############################################ testimonials custamer rating styling ########################################### */
+/* ############################################ testimonials customer rating styling ########################################### */
 
 .testimonials{
     padding: 5rem 0rem;
@@ -400,7 +400,7 @@ h1,h2,h3{
     font-size: 1.2rem;
 }
 
-/* #################################### footer tyaling ####################################### */
+/* #################################### footer styling ####################################### */
 
 .footers{
     background-color: #263238;
@@ -419,7 +419,7 @@ h1,h2,h3{
 
 /* ################################################# media queries #################################################### */
 @media (max-width: 768px){
-    .nevbar{
+    .navbar{
         opacity: 0.98;
     }
     .navbar input[type="checkbox"],
@@ -469,7 +469,7 @@ h1,h2,h3{
         transform-origin: 0% 100%;
         transition: transform 0.4s ease-in-out;
     }
-    .navbar-container .manu-items{
+    .navbar-container .menu-items{
         padding-top: 100px;
         background-color: #fff;
         height: 100vh;
@@ -490,12 +490,12 @@ h1,h2,h3{
         right: 15px;
         font-size: 3rem;
     }
-    .navbar-container .manu-items li{
+    .navbar-container .menu-items li{
        margin-bottom: 3rem;
        font-size: 2rem;
        font-weight: 500;
     }
-    .navbar input[type="checkbox"]:checked ~ .manu-items{
+    .navbar input[type="checkbox"]:checked ~ .menu-items{
         transform: translate(0);
     }
     .navbar input[type="checkbox"]:checked ~ .hamburger-lines .line1{
@@ -529,11 +529,11 @@ h1,h2,h3{
     html{
         font-size: 50%;
     }
-    .food-manu-items{
+    .food-menu-items{
         flex-direction: column;
         text-align: center;
     }
-    .food-manu-container img{
+    .food-menu-container img{
         margin: auto;
         margin-bottom: 1rem;
     }
